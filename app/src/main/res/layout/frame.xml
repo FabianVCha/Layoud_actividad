@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_main">
+
+
+    <Button
+        android:id="@+id/boton_saltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="ACCEDER" />
+
+    <ImageView
+        android:id="@+id/imagen_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:padding = "16dp"
+        android:src="@drawable/ic_launcher_foreground" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagen_estadistica"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/ic_launcher_background"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/Boton_derecho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:text="REGISTRAR" />
+
+    <Button
+        android:id="@+id/Boton_izquierdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:text="CANCELAR" />
+</FrameLayout>
