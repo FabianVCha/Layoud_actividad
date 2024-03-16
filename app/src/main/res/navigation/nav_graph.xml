@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph"
+  app:startDestination="@id/bienvenidaFragment">
+
+  <fragment
+    android:id="@+id/linearFragment"
+    android:name="Sapo.layoud_actividad.linearFragment"
+    android:label="fragment_linear"
+    tools:layout="@layout/fragment_linear" >
+    <action
+      android:id="@+id/action_linearFragment_to_frameFragment"
+      app:destination="@id/frameFragment" />
+    <action
+      android:id="@+id/action_linearFragment_to_bienvenidaFragment"
+      app:destination="@id/bienvenidaFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/frameFragment"
+    android:name="Sapo.layoud_actividad.FrameFragment"
+    android:label="fragment_frame"
+    tools:layout="@layout/fragment_frame" >
+    <action
+      android:id="@+id/action_frameFragment_to_constrainFragment"
+      app:destination="@id/constrainFragment" />
+    <action
+      android:id="@+id/action_frameFragment_to_linearFragment"
+      app:destination="@id/linearFragment" />
+    <action
+      android:id="@+id/action_frameFragment_to_bienvenidaFragment"
+      app:destination="@id/bienvenidaFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/constrainFragment"
+    android:name="Sapo.layoud_actividad.ConstrainFragment"
+    android:label="fragment_constrain"
+    tools:layout="@layout/fragment_constrain" >
+    <action
+      android:id="@+id/action_constrainFragment_to_relativeFragment"
+      app:destination="@id/relativeFragment" />
+    <action
+      android:id="@+id/action_constrainFragment_to_frameFragment"
+      app:destination="@id/frameFragment" />
+    <action
+      android:id="@+id/action_constrainFragment_to_bienvenidaFragment"
+      app:destination="@id/bienvenidaFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/relativeFragment"
+    android:name="Sapo.layoud_actividad.RelativeFragment"
+    android:label="fragment_relative"
+    tools:layout="@layout/fragment_relative" >
+    <action
+      android:id="@+id/action_relativeFragment_to_constrainFragment"
+      app:destination="@id/constrainFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/bienvenidaFragment"
+    android:name="Sapo.layoud_actividad.BienvenidaFragment"
+    android:label="fragment_bienvenida"
+    tools:layout="@layout/fragment_bienvenida" >
+    <action
+      android:id="@+id/action_bienvenidaFragment_to_linearFragment"
+      app:destination="@id/linearFragment" />
+  </fragment>
+</navigation>

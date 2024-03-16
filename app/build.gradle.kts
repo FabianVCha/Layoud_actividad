@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "Sapo.layoud_actividad"
-    compileSdk = 33
+    compileSdkVersion(34)
 
     defaultConfig {
         applicationId = "Sapo.layoud_actividad"
-        minSdk = 29
-        targetSdk = 33
+        targetSdkVersion(34)
+        minSdkVersion(29)
         versionCode = 1
         versionName = "1.0"
 
@@ -51,6 +51,11 @@ android {
 
 dependencies {
 
+    val nav_version = "2.5.3"
+    // Java language
+    implementation("androidx.navigation:navigation-fragment:$nav_version")
+    implementation("androidx.navigation:navigation-ui:$nav_version")
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")
@@ -60,6 +65,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -67,4 +73,5 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
 }

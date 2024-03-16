@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="horizontal"
+  tools:context=".linearFragment">
+
+  <!-- TODO: Update blank fragment layout -->
+
+  <TextView
+    android:id="@+id/SALUDO"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/atras_linear"
+    android:layout_marginTop="20dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:text=""
+    android:textSize="25dp" />
+
+  <RadioGroup
+    android:id="@+id/grupo_act"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/select_act"
+    android:layout_marginTop="0dp"
+    android:layout_margin="8dp">
+
+    <RadioButton
+      android:id="@+id/sauna"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="SAUNA" />
+
+    <RadioButton
+      android:id="@+id/piscina"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="PISCINA" />
+
+    <RadioButton
+      android:id="@+id/turco"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TURCO" />
+  </RadioGroup>
+
+  <TextView
+    android:id="@+id/select_act"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/SALUDO"
+    android:layout_marginTop="0dp"
+    android:fontFamily="sans-serif-smallcaps"
+    android:gravity="center"
+    android:textColor="#4040fb"
+    android:text="POR FAVOR SELECCIONE LA ACTIVIDAD EN LA QUE SE ENCUENTRA INTERESADO" />
+
+  <Spinner
+    android:id="@+id/lugar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textView2"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp" />
+
+  <TextView
+    android:id="@+id/textView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/grupo_act"
+    android:layout_marginTop="20dp"
+    android:fontFamily="sans-serif-smallcaps"
+    android:gravity="center"
+    android:textColor="#4040fb"
+    android:text="seleccione el lugar para su pasadia" />
+
+  <Button
+    android:id="@+id/atras_linear"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-smallcaps"
+    android:textColor="#FFFF"
+    android:backgroundTint="#4040fb"
+    android:text="ATRAS" />
+
+  <Button
+    android:id="@+id/button2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/lugar"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="150dp"
+    android:fontFamily="sans-serif-smallcaps"
+    android:textColor="#FFFF"
+    android:backgroundTint="#4040fb"
+    android:text="BUSCAR" />
+
+</RelativeLayout>

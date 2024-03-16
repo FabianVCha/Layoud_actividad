@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstrainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+  <ImageView
+    android:id="@+id/personal"
+    android:layout_width="95dp"
+    android:layout_height="86dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="20dp"
+    tools:src="@tools:sample/avatars" />
+
+  <ImageView
+    android:id="@+id/seguridad"
+    android:layout_width="95dp"
+    android:layout_height="86dp"
+    android:layout_below="@+id/personal"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="22dp"
+    android:layout_marginEnd="294dp"
+    android:src="@android:drawable/ic_lock_lock" />
+
+  <ImageView
+    android:id="@+id/llamadas"
+    android:layout_width="95dp"
+    android:layout_height="86dp"
+    android:layout_below="@+id/seguridad"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="22dp"
+    android:layout_marginEnd="294dp"
+    android:src="@android:drawable/stat_sys_speakerphone" />
+
+  <ImageView
+    android:id="@+id/permisos"
+    android:layout_width="95dp"
+    android:layout_height="86dp"
+    android:layout_below="@+id/llamadas"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="22dp"
+    android:layout_marginEnd="294dp"
+    android:src="@android:drawable/ic_menu_preferences" />
+
+</RelativeLayout>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string-array name="fechas">
-      <item>25 DE MARZO</item>
-      <item>14 DE MARZO</item>
-      <item>30 DE MARZO</item>
-      <item>22 DE MARZO</item>
+      <item>BOGOTA D.C.</item>
+      <item>MEDELLIN</item>
+      <item>PASTO</item>
+      <item>MELGAR</item>
   </string-array>
 </resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FrameFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+  <ImageView
+    android:id="@+id/imageView"
+    android:layout_width="133dp"
+    android:layout_height="128dp"
+    android:layout_gravity="top|center"
+    android:layout_marginTop="100dp"
+    android:src="@android:drawable/ic_dialog_map" />
+
+  <ImageView
+    android:id="@+id/one_star"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:src="@android:drawable/btn_star_big_on" />
+
+  <ImageView
+    android:id="@+id/two_star"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|left"
+    android:layout_marginLeft="125dp"
+    android:src="@android:drawable/btn_star_big_on" />
+
+  <ImageView
+    android:id="@+id/thrit_star"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|right"
+    android:layout_marginRight="125dp"
+    android:src="@android:drawable/btn_star_big_on" />
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:layout_marginBottom="200dp"
+    android:fontFamily="sans-serif-smallcaps"
+    android:gravity="center"
+    android:textColor="#4040fb"
+    android:text="SU SELECCION CUENTA CON UNA EXCELENTE CALIFICACION DE 3 ESTRELLAS, LA MAS ALTA EN EL RANKING. LE RECOMENDAMOS RESERVAR DE INMEDIATO" />
+
+  <Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:fontFamily="sans-serif-smallcaps"
+    android:textColor="#FFFF"
+    android:backgroundTint="#4040fb"
+    android:text="RESERVAR" />
+
+  <Button
+    android:id="@+id/button3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="sans-serif-smallcaps"
+    android:textColor="#FFFF"
+    android:backgroundTint="#4040fb"
+    android:text="ATRAS" />
+</FrameLayout>
