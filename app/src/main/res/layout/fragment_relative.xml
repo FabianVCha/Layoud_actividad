@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RelativeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+  <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff">
 
-</RelativeLayout>
+    <Button
+      android:id="@+id/buscar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/black"
+      android:padding="3dip"
+      android:text="ATRAS"
+      android:textColor="#FFFF" />
+
+  </TableRow>
+
+  <TableRow>
+
+    <TextView
+      android:id="@+id/textView7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#4040fb"
+      android:gravity="center"
+      android:text="GRACIAS POR RESERVAR HOTERLES FACUNDO ESPERAMOS NUESTROS SERVICIOS HAYAN SIDO DE SU AGRADO" />
+  </TableRow>
+
+  <TableRow>
+    <TextView
+      android:id="@+id/vacio"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#4040fb"
+      android:gravity="center"
+      android:text="" />
+  </TableRow>
+
+  <TableRow>
+
+    <TextView
+      android:id="@+id/SALUDO"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#4040fb"
+      android:gravity="center"
+      android:text="PORFAVOR APOYE LAS REDES SOCIALES " />
+
+
+  </TableRow>
+
+  <ImageButton
+    android:id="@+id/imageButton"
+
+    android:layout_width="wrap_content"
+    android:layout_height="118dp"
+    android:layout_column="0"
+    android:src="@drawable/baseline_arrow_circle_right_24"
+    tools:ignore="ObsoleteLayoutParam" />
+  <TextView
+    android:layout_column = "1"
+    android:id="@+id/intagram"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#4040fb"
+    android:gravity="center"
+    android:text="SIGUENOS EN INSTA"
+    tools:ignore="ObsoleteLayoutParam" />
+
+  <ImageButton
+    android:id="@+id/git"
+
+    android:layout_width="wrap_content"
+    android:layout_height="118dp"
+    android:layout_column="0"
+    android:src="@drawable/baseline_arrow_circle_left_24"
+    tools:ignore="ObsoleteLayoutParam" />
+
+  <TextView
+    android:layout_column = "1"
+    android:id="@+id/TEXTGIT"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#4040fb"
+    android:gravity="center"
+    android:text=" PARA MAS TRABAJO MIRA GIT "
+    tools:ignore="ObsoleteLayoutParam" />
+  <TableRow>
+
+  </TableRow>
+</TableLayout>

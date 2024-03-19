@@ -15,7 +15,8 @@
     android:layout_height="128dp"
     android:layout_gravity="top|center"
     android:layout_marginTop="100dp"
-    android:src="@android:drawable/ic_dialog_map" />
+    android:src="@android:drawable/ic_dialog_map"
+    app:srcCompat="@drawable/baseline_add_location_24" />
 
   <ImageView
     android:id="@+id/one_star"
