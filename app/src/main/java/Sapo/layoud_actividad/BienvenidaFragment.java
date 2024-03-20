@@ -1,5 +1,6 @@
 package Sapo.layoud_actividad;
 
+import android.graphics.Color;
 import android.media.metrics.BundleSession;
 import android.os.Bundle;
 
@@ -13,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,6 +33,9 @@ public class BienvenidaFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private Button BUSCAR_C;
+    private EditText Nombre_c;
+    private TextView Titulo_c;
+    private String Comprobante = "";
 
     public BienvenidaFragment() {
         // Required empty public constructor
@@ -71,12 +77,23 @@ public class BienvenidaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
       super.onViewCreated(view, savedInstanceState);
 
-
+      Titulo_c = (TextView) view.findViewById(R.id.TITULO);
       BUSCAR_C = (Button) view.findViewById(R.id.buscar);
+
+
       BUSCAR_C.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-          Navigation.findNavController(v).navigate(R.id.linearFragment);
+
+          Nombre_c = (EditText) view.findViewById(R.id.NOMBRE);
+          Comprobante = Nombre_c.getText().toString();
+          if(Comprobante.equals("NOMBRE") || Comprobante.equals("")){
+            Nombre_c.setTextColor(Color.RED);
+          }else{
+            Bundle bundle = new Bundle();
+            bundle.putString("amount", Comprobante);
+            Navigation.findNavController(v).navigate(R.id.linearFragment, bundle);
+          }
         }
       });
 

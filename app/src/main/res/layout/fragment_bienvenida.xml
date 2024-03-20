@@ -10,17 +10,16 @@
   <!-- TODO: Update blank fragment layout -->
 
 
-
   <TextView
     android:id="@+id/TITULO"
-    android:layout_width="202dp"
+    android:layout_width="252dp"
     android:layout_height="wrap_content"
     android:layout_alignParentStart="true"
     android:layout_alignParentTop="true"
     android:layout_alignParentEnd="true"
-    android:layout_marginStart="110dp"
-    android:layout_marginTop="70dp"
-    android:layout_marginEnd="99dp"
+    android:layout_marginStart="78dp"
+    android:layout_marginTop="66dp"
+    android:layout_marginEnd="80dp"
     android:fontFamily="sans-serif-black"
     android:gravity="center"
     android:text="HOTELES FACUNDO"
@@ -40,30 +39,17 @@
     android:text="NOMBRE"
     android:textColor="#FFFFFF" />
 
-  <EditText
-    android:id="@+id/editTextText2"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/NOMBRE"
-    android:layout_alignParentEnd="true"
-    android:layout_marginTop="50dp"
-    android:layout_marginEnd="99dp"
-    android:ems="10"
-    android:inputType="text"
-    android:textColor="#FFFFFF"
-    android:text="CIUDAD" />
-
   <Button
     android:id="@+id/buscar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_below="@+id/editTextText2"
+    android:layout_below="@+id/NOMBRE"
     android:layout_alignParentEnd="true"
-    android:layout_marginTop="50dp"
-    android:layout_marginEnd="160dp"
+    android:layout_marginTop="113dp"
+    android:layout_marginEnd="163dp"
+    android:backgroundTint="@color/black"
     android:text="BUSCAR"
-    android:textColor="#FFFF"
-    android:backgroundTint="@color/black" />
+    android:textColor="#FFFF" />
 
 
 </RelativeLayout>

@@ -5,14 +5,18 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -23,6 +27,11 @@ import android.widget.Toast;
 public class linearFragment extends Fragment {
 
     private Spinner DISPONIBLE_C;
+    private RadioGroup Grupo;
+    private TextView Saludo;
+    private Button siguiente;
+    private Button atras;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -77,6 +86,15 @@ public class linearFragment extends Fragment {
 
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
     super.onViewCreated(view, savedInstanceState);
+    //recibir el bundle
+    String Nombre = getArguments().getString("amount");
+
+
+    //set texto de bienvenida
+    Saludo = (TextView) view.findViewById(R.id.SALUDO);
+    Saludo.setText("BIENVENIDO "+Nombre+", ¿A DONDE VAMOS?");
+
+
     //Spinner
     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
       getActivity(),
@@ -94,8 +112,42 @@ public class linearFragment extends Fragment {
       }
     });
 
+    //BOTONES
+    atras = (Button) view.findViewById(R.id.atras_linear);
+    siguiente = (Button) view.findViewById(R.id.siguiente_linear);
+
+    atras.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Navigation.findNavController(v).navigate(R.id.bienvenidaFragment);
+      }
+    });
+
+    siguiente.setOnClickListener(new View.OnClickListener() {
+
+      @Override
+      public void onClick(View v) {
+        Grupo = (RadioGroup) view.findViewById(R.id.grupo_act);
+        int check = Grupo.getCheckedRadioButtonId();
+        if(check == -1){
+         re_escritura();
+        }else{
+          Navigation.findNavController(v).navigate(R.id.frameFragment);
+        }
+
+      }
+
+      private void re_escritura() {
+        Saludo.setText("PORFAVOR LLENE TODOS LOS ESPACIOS");
+      }
+    });
+
+
+
 
   }
+
+
 
 
   }

@@ -15,8 +15,7 @@
     android:layout_height="128dp"
     android:layout_gravity="top|center"
     android:layout_marginTop="100dp"
-    android:src="@android:drawable/ic_dialog_map"
-    app:srcCompat="@drawable/baseline_add_location_24" />
+    android:src="@drawable/baseline_add_location_24" />
 
   <ImageView
     android:id="@+id/one_star"
@@ -53,7 +52,7 @@
     android:text="SU SELECCION CUENTA CON UNA EXCELENTE CALIFICACION DE 3 ESTRELLAS, LA MAS ALTA EN EL RANKING. LE RECOMENDAMOS RESERVAR DE INMEDIATO" />
 
   <Button
-    android:id="@+id/button"
+    android:id="@+id/RESERVAR"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="right"
@@ -63,7 +62,7 @@
     android:text="RESERVAR" />
 
   <Button
-    android:id="@+id/button3"
+    android:id="@+id/ATRAS_frame"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:fontFamily="sans-serif-smallcaps"

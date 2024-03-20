@@ -1,12 +1,18 @@
 package Sapo.layoud_actividad;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +20,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class RelativeFragment extends Fragment {
+    private ImageButton salida;
+    private ImageButton salida_2;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -61,4 +69,31 @@ public class RelativeFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_relative, container, false);
     }
+  public void onViewCreated(@NonNull View view, @NonNull Bundle savedInstanceState){
+    super.onViewCreated(view, savedInstanceState);
+
+    salida = (ImageButton) view.findViewById(R.id.Github);
+    salida_2 = (ImageButton) view.findViewById(R.id.git);
+
+    salida.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        String url = "https://github.com/FabianVCha/Layoud_actividad"; // Reemplaza esto con tu URL
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+      }
+    });
+
+    salida_2.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        String url = "https://github.com/FabianVCha/Layoud_actividad"; // Reemplaza esto con tu URL
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+      }
+    });
+
+  }
 }

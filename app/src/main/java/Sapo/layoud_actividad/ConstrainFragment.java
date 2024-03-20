@@ -2,11 +2,14 @@ package Sapo.layoud_actividad;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +17,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ConstrainFragment extends Fragment {
+  private Button siguiente;
+  private Button atras;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -60,5 +65,27 @@ public class ConstrainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_constrain, container, false);
+
     }
+  public void onViewCreated(@NonNull View view, @NonNull Bundle savedInstanceState){
+    super.onViewCreated(view, savedInstanceState);
+
+    siguiente = (Button) view.findViewById(R.id.avanzar);
+    atras = (Button) view.findViewById(R.id.retroceder);
+
+    siguiente.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Navigation.findNavController(v).navigate(R.id.relativeFragment);
+      }
+    });
+
+    atras.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Navigation.findNavController(v).navigate(R.id.frameFragment);
+      }
+    });
+
+  }
 }

@@ -88,7 +88,7 @@
     android:text="ATRAS" />
 
   <Button
-    android:id="@+id/button2"
+    android:id="@+id/siguiente_linear"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@+id/lugar"
